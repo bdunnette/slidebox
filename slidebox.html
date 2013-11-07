@@ -17,17 +17,18 @@
         angular.module("demoapp", ["leaflet-directive"]);
         function DemoController($scope) {
             angular.extend($scope, {
-                london: {
-                    lat: 51.505,
-                    lng: -0.09,
-                    zoom: 8
+                slide: {
+                    lat: 85,
+                    lng: -179,
+                    zoom: 11
                 },
                 tiles: {
-                    url: "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
+                    url: "slides/55464_files/{z}/{x}_{y}.jpeg",
                     options: {
                         opacity: 0.9,
                         detectRetina: true,
                         reuseTiles: true,
+                        noWrap: true,
                     }
                 }
             });
@@ -52,7 +53,7 @@
     <button ng-click="changeToOpenCycleMaps()">OpenCycleMaps</button>
     <button ng-click="changeToOpenStreetMaps()">OpenStreetMaps</button>
     <p>TileLayer Url: {{ tiles.url }}</p>
-    <leaflet center="london" tiles="tiles" defaults="defaults"></leaflet>
+    <leaflet center="slide" tiles="tiles" defaults="defaults"></leaflet>
   </body>
 </html>
 
