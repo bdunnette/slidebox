@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.0.8",
+    "angular": "~1.2",
     "angular-leaflet-directive": "~0.6.1",
     "leaflet-dist": "~0.6.4",
     "bootstrap": "~3.0.2"
